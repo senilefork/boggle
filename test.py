@@ -58,8 +58,8 @@ class FlaskTests(TestCase):
         with app.test_client() as client:
             sent = {'scores' : 5}
             res = client.post('/scores', data=sent)
-            import pdb
-            pdb.set_trace()
+            #import pdb
+            #pdb.set_trace()
             print(res.data)
             self.assertEqual(res.json['scores'],'5') 
 
